@@ -10,12 +10,12 @@ This repository contains a Jupyter Notebook exported as an HTML file, showcasing
 ## 🚀 How to View the Notebook
 
 ### 🔗 Direct File Link
-Click [here](https://github.com/yourusername/repo-name/blob/main/notebook.html) to view the raw HTML file.  
+Click [here](https://github.com/Dr-MTabassum/Web-Traffic-Intelligence-by-Python/blob/main/website_performance_analysis%20(3).html) to view the raw HTML file.  
 **Note:** GitHub does not render HTML files directly—this link will display the raw code.
 
 ### 🌐 GitHub Pages (Recommended)
 If GitHub Pages is enabled:
-- Visit the published notebook at **[Your GitHub Pages URL](https://yourusername.github.io/repo-name/notebook.html)**.
+- Visit the published notebook at **[Your GitHub Pages URL](https://github.com/Dr-MTabassum/Web-Traffic-Intelligence-by-Python/blob/main/website_performance_analysis%20(3).html)**.
 - This will render the notebook properly in your browser.
 
 ### 📥 Download & Open Locally
