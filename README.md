@@ -2,7 +2,6 @@
 Welcome to this in-depth, hands-on project where I analyze real website data using Python. In this project, I explore user engagement trends and assess the performance of different acquisition channels to derive actionable insights for optimization.
 
 
-
 # 📊 Project Title: Web Traffic Intelligence: User Behavior & Channel Performance Dashboard
 
 Welcome to this in-depth, hands-on project where I analyze real website data using Python. In this project, I explore user engagement trends and assess the performance of different acquisition channels to derive actionable insights for optimization.
@@ -102,6 +101,117 @@ df.head()
 ```
 
 
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Session primary channel group (Default channel group)</th>
+      <th>Hour</th>
+      <th>Users</th>
+      <th>Sessions</th>
+      <th>Engaged sessions</th>
+      <th>Average engagement time per session</th>
+      <th>Engaged sessions per user</th>
+      <th>Events per session</th>
+      <th>Engagement rate</th>
+      <th>Event count</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Direct</td>
+      <td>23</td>
+      <td>237</td>
+      <td>300</td>
+      <td>144</td>
+      <td>47.526667</td>
+      <td>0.607595</td>
+      <td>4.673333</td>
+      <td>0.480000</td>
+      <td>1402</td>
+      <td>16/4/2016</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Organic Social</td>
+      <td>19</td>
+      <td>208</td>
+      <td>267</td>
+      <td>132</td>
+      <td>32.097378</td>
+      <td>0.634615</td>
+      <td>4.295880</td>
+      <td>0.494382</td>
+      <td>1147</td>
+      <td>17/4/2016</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Direct</td>
+      <td>23</td>
+      <td>188</td>
+      <td>233</td>
+      <td>115</td>
+      <td>39.939914</td>
+      <td>0.611702</td>
+      <td>4.587983</td>
+      <td>0.493562</td>
+      <td>1069</td>
+      <td>18/4/2016</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Organic Social</td>
+      <td>18</td>
+      <td>187</td>
+      <td>256</td>
+      <td>125</td>
+      <td>32.160156</td>
+      <td>0.668449</td>
+      <td>4.078125</td>
+      <td>0.488281</td>
+      <td>1044</td>
+      <td>19/4/2016</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Organic Social</td>
+      <td>20</td>
+      <td>175</td>
+      <td>221</td>
+      <td>112</td>
+      <td>46.918552</td>
+      <td>0.640000</td>
+      <td>4.529412</td>
+      <td>0.506787</td>
+      <td>1001</td>
+      <td>20/4/2016</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+
+
 ```python
 # Rename all columns by assigning a new list of column names
 
@@ -152,6 +262,21 @@ missing_values = df.isnull().sum()
 print("Missing values per column:")
 print(missing_values)
 ```
+
+    Missing values per column:
+    channel_group                      0
+    hour                               0
+    users                              0
+    sessions                           0
+    engaged_sessions                   0
+    avg_engagement_time_per_session    0
+    engaged_sessions_per_user          0
+    events_per_session                 0
+    engagement_rate                    0
+    event_count                        0
+    date                               0
+    dtype: int64
+    
 
 ### This dataset is **complete** with no missing values in any column.
 
@@ -210,6 +335,19 @@ df.describe(include=[np.number])
 df.describe(include=[object])
 ```
 
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    Cell In[2], line 2
+          1 # 📊 Step 3: Summary of categorical columns
+    ----> 2 df.describe(include=[object])
+    
+
+    NameError: name 'df' is not defined
+
+
 ## 📈Traffic Trends Over Time
 ### 🤔Business Questions :  What patterns or trends can you observe in website sessions and users over time❓  
 
@@ -234,6 +372,21 @@ plt.xticks(rotation=45)
 plt.grid(True)
 plt.show()
 ```
+
+
+    ---------------------------------------------------------------------------
+
+    NameError                                 Traceback (most recent call last)
+
+    Cell In[1], line 2
+          1 # Group data by date-hour and sum sessions/users
+    ----> 2 df_grouped = df.groupby('date_hour')[['sessions', 'users']].sum()
+          4 # Plot the trend
+          5 plt.figure(figsize=(10, 5))
+    
+
+    NameError: name 'df' is not defined
+
 
 
 ```python
